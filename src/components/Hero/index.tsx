@@ -44,6 +44,7 @@ const Hero = () => {
                 </ul>
 
                 <div>
+                   {/* eslint-disable-next-line react/no-unescaped-entities */}
                   <p className="mb-4 text-center text-base font-medium text-white/60">
                   Drive Growth and Revenue with Upam's Digital Solutions
                   </p>
