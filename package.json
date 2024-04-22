@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
+    "build": "prisma generate && next build",
+    "dev": "prisma generate && next dev",
+    "start": "prisma generate && next start",
     "lint": "next lint"
   },
   "dependencies": {
