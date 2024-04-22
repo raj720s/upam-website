@@ -22,27 +22,27 @@ const ForgotPassword = () => {
 
     setLoader(true);
 
-    try {
-      const res = await axios.post("/api/forgot-password/reset", {
-        email: email.toLowerCase(),
-      });
+    // try {
+    //   const res = await axios.post("/api/forgot-password/reset", {
+    //     email: email.toLowerCase(),
+    //   });
 
-      if (res.status === 404) {
-        toast.error("User not found.");
-        return;
-      }
+    //   if (res.status === 404) {
+    //     toast.error("User not found.");
+    //     return;
+    //   }
 
-      if (res.status === 200) {
-        toast.success(res.data);
-        setEmail("");
-      }
+    //   if (res.status === 200) {
+    //     toast.success(res.data);
+    //     setEmail("");
+    //   }
 
-      setEmail("");
-      setLoader(false);
-    } catch (error: any) {
-      toast.error(error?.response.data);
-      setLoader(false);
-    }
+    //   setEmail("");
+    //   setLoader(false);
+    // } catch (error: any) {
+    //   toast.error(error?.response.data);
+    //   setLoader(false);
+    // }
   };
 
   return (

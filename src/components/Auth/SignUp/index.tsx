@@ -22,23 +22,23 @@ const SignUp = () => {
     const value = Object.fromEntries(data.entries());
     const finalData = { ...value };
 
-    fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(finalData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast.success("Successfully registered");
-        setLoading(false);
-        router.push("/signin");
-      })
-      .catch((err) => {
-        toast.error(err.message);
-        setLoading(false);
-      });
+    // fetch("/api/register", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(finalData),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     toast.success("Successfully registered");
+    //     setLoading(false);
+    //     router.push("/signin");
+    //   })
+    //   .catch((err) => {
+    //     toast.error(err.message);
+    //     setLoading(false);
+    //   });
   };
 
   return (

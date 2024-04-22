@@ -22,20 +22,20 @@ const ResetPassword = ({ token }: { token: string }) => {
 
   useEffect(() => {
     const verifyToken = async () => {
-      try {
-        const res = await axios.post(`/api/forgot-password/verify-token`, {
-          token,
-        });
+      // try {
+      //   const res = await axios.post(`/api/forgot-password/verify-token`, {
+      //     token,
+      //   });
 
-        if (res.status === 200) {
-          setUser({
-            email: res.data.email,
-          });
-        }
-      } catch (error: any) {
-        toast.error(error?.response?.data);
-        router.push("/forgot-password");
-      }
+      //   if (res.status === 200) {
+      //     setUser({
+      //       email: res.data.email,
+      //     });
+      //   }
+      // } catch (error: any) {
+      //   toast.error(error?.response?.data);
+      //   router.push("/forgot-password");
+      // }
     };
 
     verifyToken();
