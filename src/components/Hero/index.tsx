@@ -6,26 +6,27 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative overflow-hidden mt-[300px]"
+        className="relative overflow-hidden pt-32 bg-primary dark:bg-blue-700"
       >
         <div className="container">
+          
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
               <div
                 className="hero-content wow fadeInUp mx-auto max-w-[780px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-6 text-3xl font-bold leading-snug sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
+                <h1 className="mb-6 text-3xl font-bold leading-snug sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2] text-white">
                 WE ARE UPAM.IN
                 </h1>
-                <p className="mx-auto mb-9 max-w-[600px] text-base font-medium sm:text-lg sm:leading-[1.44]">
+                <p className="mx-auto mb-9 max-w-[600px] text-base font-medium sm:text-lg sm:leading-[1.44] text-white">
                 Custom Product & Software Development Focused On Your Success
                 </p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
+                      className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 dark:bg-primary dark:text-white hover:cursor-pointer"
                     >
                       Book a Call
                     </Link>
@@ -34,10 +35,10 @@ const Hero = () => {
                     <Link
                       href="https://www.linkedin.com/company/upamtechnologies"
                       target="_blank"
-                      className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium  transition duration-300 ease-in-out hover:bg-white hover:text-dark"
+                      className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium  transition duration-300 ease-in-out text-white/60 hover:bg-white hover:text-dark"
                     >
-                    <i className="fab fa-linkedin"></i>
-                      See us on Linkdin
+                    <i className="fab fa-linkedin text-blue-500 font-bold text-xl "></i>
+                      Follow on Linkdin
                     </Link>
                   </li>
                 </ul>
@@ -196,6 +197,8 @@ const Hero = () => {
                     height={316}
                   />
                 </div>
+
+
                 <div className="absolute -left-9 bottom-0 z-[-1]">
                   <svg
                     width="134"
@@ -1338,6 +1341,72 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+
+            <div>
+        <span className="absolute left-0 top-0">
+          <svg
+            width="495"
+            height="470"
+            viewBox="0 0 495 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="55"
+              cy="442"
+              r="138"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="50"
+            />
+            <circle
+              cx="446"
+              r="39"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="20"
+            />
+            <path
+              d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
+              stroke="white"
+              strokeOpacity="0.08"
+              strokeWidth="12"
+            />
+          </svg>
+        </span>
+        <span className="absolute bottom-0 right-0">
+          <svg
+            width="493"
+            height="470"
+            viewBox="0 0 493 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="462"
+              cy="5"
+              r="138"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="50"
+            />
+            <circle
+              cx="49"
+              cy="470"
+              r="39"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="20"
+            />
+            <path
+              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
+              stroke="white"
+              strokeOpacity="0.06"
+              strokeWidth="13"
+            />
+          </svg>
+        </span>
+      </div>
           </div>
         </div>
       </section>

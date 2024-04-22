@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import menuData from "./menuData";
 
 const Header = () => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   const pathUrl = usePathname();
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -62,38 +62,26 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/logo.svg`}
+                      src={`/images/logo/logo.png`}
                       alt="logo"
                       width={240}
                       height={30}
-                      className="header-logo w-full dark:hidden"
+                      className="header-logo w-full pt-2"
                     />
-                    <Image
-                      src={`/images/logo/logo-white.png`}
-                      alt="logo"
-                      width={240}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
+                  
                   </>
                 ) : (
                   <>
                     <Image
                       src={`${
-                           "/images/logo/logo.svg"
+                           "/images/logo/logo.png"
                       }`}
                       alt="logo"
                       width={140}
                       height={30}
-                      className="header-logo w-full dark:hidden"
+                      className="header-logo w-full "
                     />
-                    <Image
-                      src={"/images/logo/logo-white.png"}
-                      alt="logo"
-                      width={140}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
+                
                   </>
                 )}
               </Link>
@@ -164,7 +152,7 @@ const Header = () => {
                               } ${
                                 pathUrl === menuItem?.path &&
                                 
-                                "!text-primary"
+                                "!text-blue-950"
                               }`}
                             >
                               {menuItem.title}
@@ -225,7 +213,7 @@ const Header = () => {
                             </button>
                           )}
 
-                          <div
+                          {/* <div
                             className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                               openIndex === index ? "!-left-[25px]" : "hidden"
                             }`}
@@ -243,7 +231,7 @@ const Header = () => {
                                 {submenuItem.title}
                               </Link>
                             ))}
-                          </div>
+                          </div> */}
                         </li>
                       ),
                     )}
@@ -275,8 +263,16 @@ const Header = () => {
                     </svg>
                   </span>
                 </button>
+                <>
+                <Link
+                          href="/contact"
+                          className="px-7 py-[14px] rounded-md mx-2  text-base font-medium text-dark hover:border hover:border-sky-300 dark:text-white"
+                        >
+                          Book a Call
+                        </Link>
+                </>
 
-                {session?.user ? (
+                {/* {session?.user ? (
                   <>
                     <p
                       className={`loginBtn px-7 py-3 text-base font-medium ${
@@ -340,7 +336,7 @@ const Header = () => {
                       </>
                     )}
                   </>
-                )}
+                )} */}
               </div>
             </div>
           </div>
