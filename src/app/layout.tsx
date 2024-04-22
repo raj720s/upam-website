@@ -36,7 +36,7 @@ export default function RootLayout({
         {loading ? (
           <PreLoader />
         ) : (
-          <SessionProvider>
+          // <SessionProvider>
             <ThemeProvider
               attribute="class"
               enableSystem={false}
@@ -44,13 +44,13 @@ export default function RootLayout({
             >
               <ToasterContext />
                 <Header />
-                <div className="mt-[100px]">
+                
               {children}
-                </div>
+                
               <Footer />
               <ScrollToTop />
             </ThemeProvider>
-          </SessionProvider>
+          // </SessionProvider>
         )}
       </body>
     </html>
