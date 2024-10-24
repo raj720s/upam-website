@@ -45,19 +45,17 @@ const Header = () => {
   return (
     <>
       <header
-        className={`ud-header left-0 top-0 z-40 flex w-full items-center ${
-      "shadow-nav fixed z-[999] border-b border-stroke bg-white/80 backdrop-blur-[5px] dark:border-dark-3/20 dark:bg-dark/10" 
-            
-        }`}
+        className={`ud-header left-0 top-0 z-40 flex w-full items-center ${"shadow-nav fixed z-[999] backdrop-blur-[5px] dark:border-dark-3/20 dark:bg-dark/10"
+
+          }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <Link
                 href="/"
-                className={`navbar-logo block w-full ${
-                  "py-2" 
-                } `}
+                className={`navbar-logo block w-full ${"py-2"
+                  } `}
               >
                 {pathUrl !== "/" ? (
                   <>
@@ -68,20 +66,19 @@ const Header = () => {
                       height={30}
                       className="header-logo w-full pt-2"
                     />
-                  
+
                   </>
                 ) : (
                   <>
                     <Image
-                      src={`${
-                           "/images/logo/logo.png"
-                      }`}
+                      src={`${"/images/logo/logo.png"
+                        }`}
                       alt="logo"
                       width={140}
                       height={30}
                       className="header-logo w-full "
                     />
-                
+
                   </>
                 )}
               </Link>
@@ -95,37 +92,30 @@ const Header = () => {
                   className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" &&  "bg-dark dark:bg-white"
-                        
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? " top-[7px] rotate-45" : " "
+                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${pathUrl === "/" && "bg-dark dark:bg-white"
+
+                      }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? "opacity-0 " : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" && "bg-dark dark:bg-white"
-                        
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? "opacity-0 " : " "
+                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${pathUrl === "/" && "bg-dark dark:bg-white"
+
+                      }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
-                    } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" &&  "bg-dark dark:bg-white"
-                        
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${navbarOpen ? " top-[-8px] -rotate-45" : " "
+                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${pathUrl === "/" && "bg-dark dark:bg-white"
+
+                      }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
-                    navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
-                  }`}
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${navbarOpen
+                    ? "visibility top-full opacity-100"
+                    : "invisible top-[120%] opacity-0"
+                    }`}
                 >
                   <ul className="block lg:ml-8 lg:flex lg:gap-x-8 xl:ml-14 xl:gap-x-12">
                     {menuData.map((menuItem, index) =>
@@ -136,9 +126,8 @@ const Header = () => {
                               onClick={navbarToggleHandler}
                               scroll={false}
                               href={menuItem.path}
-                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${
-                                pathUrl === menuItem?.path && "text-primary"
-                              }`}
+                              className={`ud-menu-scroll flex py-2 text-base text-dark group-hover:text-white dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${pathUrl == menuItem?.path && "text-primary"
+                                }`}
                             >
                               {menuItem.title}
                             </Link>
@@ -146,14 +135,12 @@ const Header = () => {
                             <Link
                               scroll={false}
                               href={menuItem.path}
-                              className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                               "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
-                                
-                              } ${
-                                pathUrl === menuItem?.path &&
-                                
+                              className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-white dark:text-white dark:group-hover:text-black"
+
+                                } ${pathUrl === menuItem?.path &&
+
                                 "!text-blue-950"
-                              }`}
+                                }`}
                             >
                               {menuItem.title}
                             </Link>
@@ -187,11 +174,9 @@ const Header = () => {
                           ) : (
                             <button
                               onClick={() => handleSubmenu(index)}
-                              className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                                
-                                   "text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
-                                  
-                              }`}
+                              className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
+
+                                }`}
                             >
                               {menuItem.title}
 
@@ -264,12 +249,12 @@ const Header = () => {
                   </span>
                 </button>
                 <>
-                <Link
-                          href="/contact"
-                          className="px-7 py-[14px] rounded-md mx-2  text-base font-medium text-dark hover:border hover:border-sky-300 dark:text-white"
-                        >
-                          Book a Call
-                        </Link>
+                  <Link
+                    href="/contact"
+                    className="px-7 py-[14px] rounded-md mx-2  text-base font-medium text-dark hover:border hover:border-sky-300 dark:text-white"
+                  >
+                    Book a Call
+                  </Link>
                 </>
 
                 {/* {session?.user ? (

@@ -12,17 +12,20 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Brilliant Toolkit to Build Next.js SaaS Websites.
+                  Leading Experts in Mobile and Software Development.
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
+                  At Upam, we are passionate about crafting innovative mobile
+                  and software solutions that drive businesses forward. Our team
+                  of leading experts, each with over a decade of experience,
+                  specializes in cutting-edge technology and software
+                  development, ensuring our clients achieve their goals in an
+                  increasingly digital world.
                   <br /> <br />
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
+                  We believe in harnessing the power of technology to transform
+                  businesses. Our vision is to be a trusted partner to companies
+                  worldwide, helping them innovate and thrive in a rapidly
+                  evolving digital landscape.
                 </p>
 
                 <a
@@ -42,7 +45,7 @@ const About = () => {
                   >
                     <Image
                       src="/images/about/about-image-01.jpg"
-                      alt="about image"
+                      alt="Upam team image"
                       fill
                       className="h-full w-full object-cover object-center"
                     />
@@ -53,7 +56,7 @@ const About = () => {
                   <div className="relative mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
                     <Image
                       src="/images/about/about-image-02.jpg"
-                      alt="about image"
+                      alt="Upam project showcase"
                       fill
                       className="h-full w-full object-cover object-center"
                     />
@@ -62,7 +65,7 @@ const About = () => {
                   <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        09
+                        10+
                       </span>
                       <span className="block text-base font-semibold text-white">
                         We have
