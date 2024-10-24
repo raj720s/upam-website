@@ -40,7 +40,7 @@ export default function RootLayout({
             <ThemeProvider
               attribute="class"
               enableSystem={false}
-              defaultTheme="light"
+              defaultTheme="dark"
             >
               <ToasterContext />
                 <Header />
