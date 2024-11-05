@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PricingPage = () => {
   return (
     <>
-      <Breadcrumb pageName="Pricing Page" />
+      {/* <Breadcrumb pageName="Pricing Page" /> */}
       <Pricing />
       <Faq />
     </>

@@ -79,7 +79,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Details" />
+      {/* <Breadcrumb pageName="Blog Details" /> */}
 
       <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">

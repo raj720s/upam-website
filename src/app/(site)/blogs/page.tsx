@@ -14,7 +14,7 @@ const Blog = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Grids" />
+      {/* <Breadcrumb pageName="Blog Grids" /> */}
 
       <section className="pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
         <div className="container">
