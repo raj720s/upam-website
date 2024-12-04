@@ -22,7 +22,7 @@ export default function Home() {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
 
   return (
-    <main>
+    <main className="">
       <ScrollUp />
       <Hero />
       <Features />
