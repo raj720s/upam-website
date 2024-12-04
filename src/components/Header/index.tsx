@@ -60,9 +60,9 @@ const Header = () => {
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/logo.png`}
+                      src={`/images/logo/logo_.png`}
                       alt="logo"
-                      width={240}
+                      width={50}
                       height={30}
                       className="header-logo w-full pt-2"
                     />
@@ -71,10 +71,10 @@ const Header = () => {
                 ) : (
                   <>
                     <Image
-                      src={`${"/images/logo/logo.png"
+                      src={`${"/images/logo/logo_.png"
                         }`}
                       alt="logo"
-                      width={140}
+                      width={50}
                       height={30}
                       className="header-logo w-full "
                     />
