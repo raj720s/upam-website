@@ -51,8 +51,8 @@ const Header = () => {
   return (
     <header
       className={`ud-header top-0 left-0 z-40 w-full transition-all duration-300 ${sticky
-          ? "fixed backdrop-blur-md bg-white/80 dark:bg-dark/80 shadow-lg"
-          : "absolute bg-transparent"
+        ? "fixed backdrop-blur-md bg-white/80 dark:bg-dark/80 shadow-lg"
+        : "absolute bg-transparent"
         }`}
     >
       <div className="container mx-auto">
@@ -73,64 +73,112 @@ const Header = () => {
           {/* Navbar */}
           <nav
             id="navbarCollapse"
-            className={`absolute right-0 z-30 w-[250px] bg-white dark:bg-dark border rounded-lg px-6 py-4 transition-all duration-300 lg:relative lg:w-auto lg:border-none lg:rounded-none lg:bg-transparent lg:py-0 ${navbarOpen ? "visible opacity-100 top-16" : "invisible opacity-0 top-[120%]"
+            className={`navbar ml-auto absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${navbarOpen
+              ? "visibility top-full opacity-100"
+              : "invisible top-[120%] opacity-0"
               }`}
           >
-            <ul className="block lg:flex lg:space-x-8">
-              {menuData.map((menuItem, index) => (
-                <li key={index} className="relative group">
-                  {menuItem.submenu ? (
-                    <>
-                      <button
-                        onClick={() => handleSubmenu(index)}
-                        className={`flex items-center justify-between w-full py-2 text-base text-dark hover:text-primary dark:text-white`}
+            <ul className="block lg:ml-8 lg:flex lg:gap-x-8 xl:ml-14 xl:gap-x-12">
+              {menuData.map((menuItem, index) =>
+                menuItem.path ? (
+                  <li key={index} className="group relative">
+                    {pathUrl !== "/" ? (
+                      <Link
+                        onClick={navbarToggleHandler}
+                        scroll={false}
+                        href={menuItem.path}
+                        className={`ud-menu-scroll flex py-2 text-base text-dark  dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6 ${pathUrl == menuItem?.path && "text-primary"
+                          }`}
                       >
                         {menuItem.title}
-                        <span>
+                      </Link>
+                    ) : (
+                      <Link
+                        scroll={false}
+                        href={menuItem.path}
+                        className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-white dark:text-white dark:group-hover:text-black"
+
+                          } ${pathUrl === menuItem?.path &&
+
+                          "!text-blue-950"
+                          }`}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    )}
+                  </li>
+                ) : (
+                  <li className="submenu-item group relative" key={index}>
+                    {pathUrl !== "/" ? (
+                      <button
+                        onClick={() => handleSubmenu(index)}
+                        className={`ud-menu-scroll flex items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary lg:inline-flex lg:px-0 lg:py-6`}
+                      >
+                        {menuItem.title}
+
+                        <span className="pl-1">
                           <svg
-                            className={`h-4 w-4 transition-transform ${openIndex === index ? "rotate-180" : ""
-                              }`}
-                            viewBox="0 0 16 16"
+                            className={`duration-300 lg:group-hover:rotate-180`}
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M8 10.667L3.333 6l1.154-1.154L8 8.358l3.512-3.512L12.667 6z"
+                              d="M8.00039 11.9C7.85039 11.9 7.72539 11.85 7.60039 11.75L1.85039 6.10005C1.62539 5.87505 1.62539 5.52505 1.85039 5.30005C2.07539 5.07505 2.42539 5.07505 2.65039 5.30005L8.00039 10.525L13.3504 5.25005C13.5754 5.02505 13.9254 5.02505 14.1504 5.25005C14.3754 5.47505 14.3754 5.82505 14.1504 6.05005L8.40039 11.7C8.27539 11.825 8.15039 11.9 8.00039 11.9Z"
                               fill="currentColor"
                             />
                           </svg>
                         </span>
                       </button>
-                      <ul
-                        className={`absolute left-0 mt-2 w-48 bg-white shadow-lg dark:bg-dark rounded-md transition-all duration-300 ${openIndex === index ? "block opacity-100" : "hidden opacity-0"
+                    ) : (
+                      <button
+                        onClick={() => handleSubmenu(index)}
+                        className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-primary dark:text-white dark:group-hover:text-primary"
+
                           }`}
                       >
-                        {menuItem.submenu.map((subItem, subIndex) => (
-                          <li key={subIndex}>
-                            <Link
-                              href={subItem.path || "#"}
-                              className="block px-4 py-2 text-sm text-dark hover:text-primary dark:text-white"
-                              onClick={navbarToggleHandler}
-                            >
-                              {subItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <Link
-                      href={menuItem.path || "#"}
-                      onClick={(e) => scrollToSection(e, menuItem.path || "#")}
-                      className={`block py-2 text-base ${pathUrl === menuItem.path
-                          ? "text-primary"
-                          : "text-dark hover:text-primary dark:text-white"
+                        {menuItem.title}
+
+                        <span className="pl-1">
+                          <svg
+                            className={`duration-300 lg:group-hover:rotate-180`}
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.00039 11.9C7.85039 11.9 7.72539 11.85 7.60039 11.75L1.85039 6.10005C1.62539 5.87505 1.62539 5.52505 1.85039 5.30005C2.07539 5.07505 2.42539 5.07505 2.65039 5.30005L8.00039 10.525L13.3504 5.25005C13.5754 5.02505 13.9254 5.02505 14.1504 5.25005C14.3754 5.47505 14.3754 5.82505 14.1504 6.05005L8.40039 11.7C8.27539 11.825 8.15039 11.9 8.00039 11.9Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    )}
+
+                    <div
+                      className={`submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "!-left-[25px]" : "hidden"
                         }`}
                     >
-                      {menuItem.title}
-                    </Link>
-                  )}
-                </li>
-              ))}
+                      {menuItem?.submenu?.map((submenuItem: any, i) => (
+                        <Link
+                          href={submenuItem.path}
+                          key={i}
+                          className={`block rounded px-4 py-[10px] text-sm ${pathUrl === submenuItem.path
+                            ? "text-primary"
+                            : "text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+                            }`}
+                        >
+                          {submenuItem.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </li>
+                ),
+              )}
             </ul>
           </nav>
 
@@ -154,7 +202,7 @@ const Header = () => {
           </button>
 
           {/* Theme Toggle and CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4 ml-4">
             <button
               aria-label="theme toggler"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
