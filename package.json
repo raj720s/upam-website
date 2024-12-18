@@ -3,14 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "prisma generate && next build",
-    "dev": "prisma generate && next dev",
-    "start": "prisma generate && next start",
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "@auth/prisma-adapter": "^1.5.0",
-    "@prisma/client": "^5.11.0",
+  "dependencies": { 
     "axios": "^1.6.2",
     "bcrypt": "^5.0.1",
     "date-fns": "^3.4.0",
@@ -21,7 +19,6 @@
     "nodemailer": "^6.9.12",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "prisma": "^5.7.0",
     "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18",
