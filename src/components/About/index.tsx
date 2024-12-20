@@ -1,5 +1,11 @@
+ 
+ 
 import Image from "next/image";
+import upam from "C/about/upam-website 4.jpg"
 
+
+
+ 
 const About = () => {
   return (
     <section
@@ -14,13 +20,16 @@ const About = () => {
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
                   Leading Experts in Mobile and Software Development.
                 </h2>
-                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
+                <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6" >
                   At Upam, we are passionate about crafting innovative mobile
                   and software solutions that drive businesses forward. Our team
                   of leading experts, each with over a decade of experience,
                   specializes in cutting-edge technology and software
                   development, ensuring our clients achieve their goals in an
-                  increasingly digital world.
+                  increasingly digital world.With a team of seasoned experts, we combine innovation, 
+                  technical excellence, and a customer-centric approach to craft scalable, secure, and user-friendly applications.
+                   Whether it’s creating intuitive mobile apps, developing robust enterprise software, or offering end-to-end digital transformation,
+                    Upam-Website is committed to driving success for our clients through state-of-the-art technology and unwavering dedication to quality.
                   <br /> <br />
                   We believe in harnessing the power of technology to transform
                   businesses. Our vision is to be a trusted partner to companies
@@ -28,12 +37,7 @@ const About = () => {
                   evolving digital landscape.
                 </p>
 
-                <a
-                  href="/#"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
-                >
-                  Know More
-                </a>
+                
               </div>
             </div>
 
@@ -41,158 +45,46 @@ const About = () => {
               <div className="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                   <div
-                    className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px] `}
+                    className="wl-[400px]  h-[600px] "
                   >
-                    <Image
-                      src="/images/about/about-image-01.jpg"
-                      alt="Upam team image"
-                      fill
-                      className="h-full w-full object-cover object-center"
+                    <img
+                      src="https://www.mygreatlearning.com/blog/wp-content/uploads/2020/07/iStock-1227556289.jpg"
+                      alt="Upam team image" 
+                       className="h-full w-full object-cover object-center"
                     />
                   </div>
                 </div>
 
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  <div className="relative mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
-                    <Image
-                      src="/images/about/about-image-02.jpg"
-                      alt="Upam project showcase"
-                      fill
+                  <div className="w-[400px] h-[300px]">
+                    <img
+                     src="https://media.licdn.com/dms/image/D4E12AQEnNKiiNUKz9Q/article-cover_image-shrink_720_1280/0/1693476739453?e=2147483647&v=beta&t=vA7q5Jo23C2UXQE4FQ3lTlpB7ugmZa5QZzAfSQ5rQ-A"
+                     alt="Upam project Showcase"
+                     loading="lazy"
                       className="h-full w-full object-cover object-center"
                     />
                   </div>
+                  <div className="w-[400px] h-[300px]">
+                    <img
+                     src="https://www.simplilearn.com/ice9/free_resources_article_thumb/cyber_security_vs_software_engineering.jpg"
+                     loading="lazy"
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                 
 
-                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
-                    <div>
-                      <span className="block text-5xl font-extrabold text-white">
-                        10+
-                      </span>
-                      <span className="block text-base font-semibold text-white">
-                        We have
-                      </span>
-                      <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
-                      </span>
-                    </div>
-                    <div>
-                      <span className="absolute left-0 top-0 -z-10">
-                        <svg
-                          width="106"
-                          height="144"
-                          viewBox="0 0 106 144"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            opacity="0.1"
-                            x="-67"
-                            y="47.127"
-                            width="113.378"
-                            height="131.304"
-                            transform="rotate(-42.8643 -67 47.127)"
-                            fill="url(#paint0_linear_1416_214)"
-                          />
-                          <defs>
-                            <linearGradient
-                              id="paint0_linear_1416_214"
-                              x1="-10.3111"
-                              y1="47.127"
-                              x2="-10.3111"
-                              y2="178.431"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stopColor="white" />
-                              <stop
-                                offset="1"
-                                stopColor="white"
-                                stopOpacity="0"
-                              />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                      </span>
-                      <span className="absolute right-0 top-0 -z-10">
-                        <svg
-                          width="130"
-                          height="97"
-                          viewBox="0 0 130 97"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            opacity="0.1"
-                            x="0.86792"
-                            y="-6.67725"
-                            width="155.563"
-                            height="140.614"
-                            transform="rotate(-42.8643 0.86792 -6.67725)"
-                            fill="url(#paint0_linear_1416_215)"
-                          />
-                          <defs>
-                            <linearGradient
-                              id="paint0_linear_1416_215"
-                              x1="78.6495"
-                              y1="-6.67725"
-                              x2="78.6495"
-                              y2="133.937"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stopColor="white" />
-                              <stop
-                                offset="1"
-                                stopColor="white"
-                                stopOpacity="0"
-                              />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                      </span>
-                      <span className="absolute bottom-0 right-0 -z-10">
-                        <svg
-                          width="175"
-                          height="104"
-                          viewBox="0 0 175 104"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            opacity="0.1"
-                            x="175.011"
-                            y="108.611"
-                            width="101.246"
-                            height="148.179"
-                            transform="rotate(137.136 175.011 108.611)"
-                            fill="url(#paint0_linear_1416_216)"
-                          />
-                          <defs>
-                            <linearGradient
-                              id="paint0_linear_1416_216"
-                              x1="225.634"
-                              y1="108.611"
-                              x2="225.634"
-                              y2="256.79"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stopColor="white" />
-                              <stop
-                                offset="1"
-                                stopColor="white"
-                                stopOpacity="0"
-                              />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                      </span>
+    
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
+       </section>
+       )
 };
 
 export default About;
+
+
+
