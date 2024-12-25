@@ -96,10 +96,8 @@ const Header = () => {
                       <Link
                         scroll={false}
                         href={menuItem.path}
-                        className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-white dark:text-white dark:group-hover:text-black"
-
+                        className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${"text-dark group-hover:text-gray-400 dark:text-white dark:group-hover:text-black"
                           } ${pathUrl === menuItem?.path &&
-
                           "!text-blue-950"
                           }`}
                       >
